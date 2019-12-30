@@ -1,6 +1,5 @@
 /****************************
- * Arttu Lehtovaara         *
- * Opiskelija nro 1701848   *
+ * Arttu Lehtovaara         *  
  * **************************/
 
 package fi.lamk.mymatrix;
