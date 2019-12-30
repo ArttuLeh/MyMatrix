@@ -60,13 +60,10 @@ public class Matrix
     }
     boolean sum(Matrix other)
     {
-        // 1)use getRowCount() and getColCount() fist to check if matrix "this"
-        // and "other" has equal dimensions.. if not return false
+        // check if matrix "this" and "other" has equal dimensions.. if not return false
         if ((getRowCount() != other.getRowCount()) || getColCount() != other.getColCount())
             return false;
-        // 2) create nested for loops and use our own get() function for "this"
-        // and "other" and make the additions and then call our own set().. why?
-        // because value+value2 can be zero!!
+
         for (int i = 0; i < getRowCount(); i++) 
         {
             for (int j = 0; j < getColCount(); j++) 
@@ -84,9 +81,7 @@ public class Matrix
     int getRowCount()
     {
         int maxY = -1;
-        // use KeySet() for getting all the keys and check what is the max..
-        
-        //Set<Point> keys = matrix.keySet();
+        // useing KeySet() for getting all the keys and check what is the max..
         for (Point p : matrix.keySet())
         {
             if (p.getY() > maxY)
@@ -99,7 +94,6 @@ public class Matrix
     int getColCount()
     {
         int maxX = -1;
-        // use KeySet() for getting all the keys and check what is the max..
         for (Point px : matrix.keySet())
         {
             if (px.getX() > maxX)
@@ -111,14 +105,13 @@ public class Matrix
     }
     void print()
     {
-        // use getRowCount() and the getColCount() for the for nested loops..
         int rows = getRowCount();
         int cols = getColCount();
         for (int i = 0; i < rows; i++) // all the rows..
         {
             for (int j = 0; j < cols; j++) // all the columns..
             {
-                // use our own get() to get the values (including zeros)
+                // useing own get() to get the values (including zeros)
                 System.out.print(get(j, i) + " ");
             }
             System.out.println();
